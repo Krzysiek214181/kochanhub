@@ -12,28 +12,37 @@ body{
     background-color: #161616;
 }
 
+#main-div{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 header{
     width: 100%;
     height: 80px;
-    background-color: #ffa31a;
+    background-color: white;
     display: flex;
-    justify-content: center;
-    padding: 15px 0;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
 }
 
 .intro{
     position:fixed;
-    z-index: 1;
+    z-index: 0.5;
     left: 0;
     top: 0;
     width: 100%;
     height: 100vh;
-    background-color: #ffa31a;
+    background-color: white;
     color: black;
-    transition: 1.5s;
+    transition: 1s;
 }
 
-.logo-header{
+.intro-header{
     position: absolute;
     top: 40%;
     left: 50%;
@@ -41,21 +50,64 @@ header{
     font-size: calc(5vw + 10px );
 }
 
-.logo{
+.intro-text{
     position: relative;
     display: inline-block;
     bottom: -20px;
     opacity: 0;
 }
 
-.logo.fadein{
+.intro-text.fadein{
     bottom: 0;
     opacity: 1;
     transition: ease-in-out 0.5s;
 }
 
-.logo.fadeout{
+.intro-text.fadeout{
     bottom: 150px;
     opacity: 0;
     transition: ease-in-out 0.5s;
+}
+
+.logo{
+    font-size: 2rem;
+
+}
+
+.user-icon{
+    width: 60px;
+}
+
+.buttons{
+    margin-top: 10%;
+    /* background-color: white; */
+    width: 100%;
+    height:400px;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.button{
+    height: 70%;
+    max-width: 400px;
+    max-height: 300px;
+    width: 75%;
+    margin: 40px 0;   
+    border-radius: 20px;
+    border: 6px solid white;
+    background-color: #555555;
+    color: white;
+    transition: 0.4s ease;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.button:hover{
+    cursor: pointer;
+    font-size: 2.5rem;
 }

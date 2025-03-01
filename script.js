@@ -1,28 +1,30 @@
-let intro = document.querySelector('.intro');
-let logo = document.querySelector('.logo-header');
-let logoSpan = document.querySelectorAll('.logo');
+//intro to the website
 
-window.addEventListener('DOMContentLoaded', () =>{
+    let intro = document.querySelector('.intro');
+    let logo = document.querySelector('.intro-header');
+    let logoSpan = document.querySelectorAll('.intro-text');
 
-    setTimeout(()=> {
-        
-        logoSpan.forEach((span, idx) =>{
-            setTimeout(() => {
-                span.classList.add('fadein');
-          }, (idx + 1) * 400)
-        });
+    window.addEventListener('DOMContentLoaded', () =>{
 
-        setTimeout(() => {
-            logoSpan.forEach((span, idx)=>{
+        setTimeout(()=> {
+            
+            logoSpan.forEach((span, idx) =>{
                 setTimeout(() => {
-                    span.classList.remove('fadein');
-                    span.classList.add('fadeout');
-                }, (idx + 1) * 50);
+                    span.classList.add('fadein');
+            }, (idx + 1) * 300)
             });
-        }, 2000);
 
-        setTimeout(() => {
-            intro.style.top = '-100vh';
-        }, 2300);
-    },)
-})
+            setTimeout(() => {
+                logoSpan.forEach((span, idx)=>{
+                    setTimeout(() => {
+                        span.classList.remove('fadein');
+                        span.classList.add('fadeout');
+                    }, (idx + 1) * 50);
+                });
+            }, 1300);
+
+            setTimeout(() => {
+                intro.style.top = '-100vh';
+            }, 1500);
+        },)
+    })
